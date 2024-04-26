@@ -1,4 +1,4 @@
-package ru.netology.domain;
+package ru.netology.test;
 
 
 
@@ -7,7 +7,7 @@ import com.github.javafaker.Faker;
 import java.util.Locale;
 
 public class UserGenerator {
-    private Faker faker;
+    private final Faker faker;
     public UserGenerator(){
         this.faker = new Faker(new Locale("ru"));
     }
@@ -15,8 +15,5 @@ public class UserGenerator {
     public User generateUser(){
         return new User();
     }
-    public void see(){
-        User user = new User();
-        System.out.println(user);
-    }
+
 }
